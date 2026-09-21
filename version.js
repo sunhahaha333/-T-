@@ -1,7 +1,7 @@
 /* 发布新版时只改 version / notes。 */
 window.__ZUOTBENBEN_REMOTE_VERSION__ = {
-  version: "1.0.0",
+  version: "1.0.1",
   url: "./index.html",
-  notes: "V1.0.0 · B1 图标",
+  notes: "V1.0.1 · B1 图标",
   releasedAt: "2026-09-21"
 };
