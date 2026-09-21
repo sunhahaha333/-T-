@@ -1,0 +1,20 @@
+{
+  "name": "做T本本",
+  "short_name": "做T本本",
+  "description": "做T交易记录、配对与持仓管理",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F2F7",
+  "theme_color": "#FF7A55",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
