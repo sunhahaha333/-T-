@@ -1,8 +1,8 @@
 (function () {
-  var version = { version: "1.2.8", url: "./index.html", notes: "V1.2.8 · 恢复删除记录与编号合并", releasedAt: "2026-09-24" };
+  var version = { version: "1.2.0", url: "./index.html", notes: "V1.2.0 · 今天全部修改合并版", releasedAt: "2026-09-24" };
   if (typeof window !== "undefined") window.__ZUOTBENBEN_REMOTE_VERSION__ = version;
   if (typeof self !== "undefined" && typeof caches !== "undefined" && typeof self.skipWaiting === "function") {
-    var CACHE = "zuotbenben-v1.2.8";
+    var CACHE = "zuotbenben-v1.2.0";
     var ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon.png"];
     self.addEventListener("install", function (event) {
       event.waitUntil(caches.open(CACHE).then(function (cache) {
