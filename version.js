@@ -26,10 +26,13 @@
       if (url.pathname.slice(-10) === "version.js") return;
       var isPage = req.mode === "navigate" || url.pathname.slice(-10) === "index.html" || url.pathname.slice(-1) === "/";
       if (isPage) {
-        event.respondWith(fetch(req).then(function (resp) {
-          if (resp && resp.ok) caches.open(CACHE).then(function (cache) { cache.put(req, resp.clone()); });
-          return resp;
-        }).catch(function () { return caches.match(req, { ignoreSearch: true }); }));
+        event.respondWith(caches.match(req, { ignoreSearch: true }).then(function (cached) {
+          var network = fetch(req).then(function (resp) {
+            if (resp && resp.ok) caches.open(CACHE).then(function (cache) { cache.put(req, resp.clone()); });
+            return resp;
+          });
+          return cached || network.catch(function () { return cached; });
+        }));
         return;
       }
       event.respondWith(caches.match(req, { ignoreSearch: true }).then(function (cached) {
