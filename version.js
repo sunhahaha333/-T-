@@ -1,5 +1,5 @@
 (function () {
-  var version = { version: "1.3.7", url: "./index.html", notes: "V1.3.7 · 统一下拉刷新与逐单最近盈利", releasedAt: "2026-09-24" };
+  var version = { version: "1.3.8", url: "./index.html", notes: "V1.3.8 · 统一下拉刷新与逐单最近盈利", releasedAt: "2026-09-24" };
   if (typeof window !== "undefined") window.__ZUOTBENBEN_REMOTE_VERSION__ = version;
 
 
@@ -11,7 +11,7 @@
   navigator.serviceWorker.getRegistrations().then(function (regs) { return Promise.all(regs.map(function (r) { return r.unregister(); })); }).then(function () { if (typeof caches === "undefined") return; return caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); }); }).then(function () { localStorage.setItem("zuotbenben_sw_reset_v3", "done"); location.reload(); }).catch(function () {});
 })();
   if (typeof self !== "undefined" && typeof caches !== "undefined" && typeof self.skipWaiting === "function") {
-    var CACHE = "zuotbenben-v1.3.7";
+    var CACHE = "zuotbenben-v1.3.8";
     var ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon.png"];
     self.addEventListener("install", function (event) {
       event.waitUntil(caches.open(CACHE).then(function (cache) {
