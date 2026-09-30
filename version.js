@@ -1,10 +1,10 @@
 (function () {
-  var version = { version: "1.5.0", url: "./index.html", notes: "V1.5.0 · 今日交易优先与配对锁定", releasedAt: "2026-09-28" };
+  var version = { version: "1.6.0", url: "./index.html", notes: "V1.6.0 · 配对冻结、排序与云端合并修复", releasedAt: "2026-09-30" };
   if (typeof window !== "undefined") window.__ZUOTBENBEN_REMOTE_VERSION__ = version;
 
 
   if (typeof self !== "undefined" && typeof caches !== "undefined" && typeof self.skipWaiting === "function") {
-    var CACHE = "zuotbenben-v1.5.0";
+    var CACHE = "zuotbenben-v1.6.0";
     var ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon.png"];
     self.addEventListener("install", function (event) {
       event.waitUntil(caches.open(CACHE).then(function (cache) {
